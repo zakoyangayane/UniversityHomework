@@ -11,10 +11,7 @@ public class University {
     public University(String name, Faculty[] faculties) {
         this.name = name;
 
-        /*throwing an exception if no faculties included*/
-        if (faculties.length == 0) {
-            throw new UniversityWithNullFacultiesException();
-        }
+        setFaculties(faculties);
         this.faculties = faculties;
     }
 

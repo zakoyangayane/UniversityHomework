@@ -11,10 +11,7 @@ public class Faculty {
     public Faculty(String name, Group[] groups) {
         this.name = name;
 
-        /*throwing an exception if no groups included*/
-        if (groups.length == 0) {
-            throw new FacultyWithNullGroupsException();
-        }
+        setGroups(groups);
         this.groups = groups;
     }
 

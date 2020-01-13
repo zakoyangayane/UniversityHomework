@@ -13,15 +13,8 @@ public class Group {
     public Group(String name, Student[] students, Subject[] subjects) {
         this.name = name;
 
-        /*throwing an exception if no students included*/
-        if (students.length == 0) {
-            throw new GroupWithNullStudentsException();
-        }
-
-        /*throwing an exception if no subjects mentioned for the students*/
-        if (subjects.length == 0) {
-            throw new StudentWithNullSubjectsException();
-        }
+        setStudents(students);
+        setSubjects(subjects);
 
         this.students = students;
         this.subjects = subjects;

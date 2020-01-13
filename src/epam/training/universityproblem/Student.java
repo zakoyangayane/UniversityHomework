@@ -24,4 +24,5 @@ public class Student {
         System.out.println("Average mark of " + firstName + " " + lastName +
                 " from " + subject.getName() + " is " + avg);
     }
+
 }
