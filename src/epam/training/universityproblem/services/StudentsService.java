@@ -55,49 +55,49 @@ public class StudentsService {
     /*setting grades for every student from their subjects*/
     public void setStudentGrades() {
         setSubjectsForStudents();
-        student1.setGrade(new Grade(new int[]{4, 7, 9}, subjectsService.armenian));
-        student1.setGrade(new Grade(new int[]{4, 5, 6}, subjectsService.linearAlgebra));
-        student1.setGrade(new Grade(new int[]{9, 8, 8}, subjectsService.english));
+        student1.setGrade(new Grade(new int[]{4, 7, 9}, student1.getSubjects()[0]));
+        student1.setGrade(new Grade(new int[]{4, 5, 6}, student1.getSubjects()[1]));
+        student1.setGrade(new Grade(new int[]{9, 8, 8}, student1.getSubjects()[2]));
 
-        student2.setGrade(new Grade(new int[]{3, 7, 7}, subjectsService.russian));
-        student2.setGrade(new Grade(new int[]{5, 5, 6}, subjectsService.linearAlgebra));
-        student2.setGrade(new Grade(new int[]{7, 8, 9}, subjectsService.english));
+        student2.setGrade(new Grade(new int[]{3, 7, 7}, student2.getSubjects()[0]));
+        student2.setGrade(new Grade(new int[]{5, 5, 6}, student2.getSubjects()[1]));
+        student2.setGrade(new Grade(new int[]{7, 8, 9}, student2.getSubjects()[2]));
 
-        student3.setGrade(new Grade(new int[]{4, 5, 6}, subjectsService.russian));
-        student3.setGrade(new Grade(new int[]{4, 4, 8}, subjectsService.cpp));
-        student3.setGrade(new Grade(new int[]{7, 9, 9}, subjectsService.armenian));
+        student3.setGrade(new Grade(new int[]{4, 5, 6}, student3.getSubjects()[0]));
+        student3.setGrade(new Grade(new int[]{4, 4, 8}, student3.getSubjects()[1]));
+        student3.setGrade(new Grade(new int[]{7, 9, 9}, student3.getSubjects()[2]));
 
-        student4.setGrade(new Grade(new int[]{5, 5, 8}, subjectsService.armenian));
-        student4.setGrade(new Grade(new int[]{7, 5, 7}, subjectsService.history));
-        student4.setGrade(new Grade(new int[]{9, 8, 10}, subjectsService.cpp));
+        student4.setGrade(new Grade(new int[]{5, 5, 8}, student4.getSubjects()[0]));
+        student4.setGrade(new Grade(new int[]{7, 5, 7}, student4.getSubjects()[1]));
+        student4.setGrade(new Grade(new int[]{9, 8, 10}, student4.getSubjects()[2]));
 
-        student5.setGrade(new Grade(new int[]{8, 5, 9}, subjectsService.maths));
-        student5.setGrade(new Grade(new int[]{7, 5, 8}, subjectsService.history));
-        student5.setGrade(new Grade(new int[]{6, 5, 6}, subjectsService.german));
+        student5.setGrade(new Grade(new int[]{8, 5, 9}, student5.getSubjects()[0]));
+        student5.setGrade(new Grade(new int[]{7, 5, 8}, student5.getSubjects()[1]));
+        student5.setGrade(new Grade(new int[]{6, 5, 6}, student5.getSubjects()[2]));
 
-        student6.setGrade(new Grade(new int[]{8, 7, 6}, subjectsService.maths));
-        student6.setGrade(new Grade(new int[]{7, 9, 9}, subjectsService.german));
-        student6.setGrade(new Grade(new int[]{4, 7, 7}, subjectsService.english));
+        student6.setGrade(new Grade(new int[]{8, 7, 6}, student6.getSubjects()[0]));
+        student6.setGrade(new Grade(new int[]{7, 9, 9}, student6.getSubjects()[1]));
+        student6.setGrade(new Grade(new int[]{4, 7, 7}, student6.getSubjects()[2]));
 
-        student7.setGrade(new Grade(new int[]{8, 8, 9}, subjectsService.philosophy));
-        student7.setGrade(new Grade(new int[]{7, 5, 7}, subjectsService.maths));
+        student7.setGrade(new Grade(new int[]{8, 8, 9}, student7.getSubjects()[0]));
+        student7.setGrade(new Grade(new int[]{7, 5, 7}, student7.getSubjects()[1]));
 
-        student8.setGrade(new Grade(new int[]{9, 9, 9}, subjectsService.cpp));
-        student8.setGrade(new Grade(new int[]{6, 8, 7}, subjectsService.maths));
+        student8.setGrade(new Grade(new int[]{9, 9, 9}, student8.getSubjects()[0]));
+        student8.setGrade(new Grade(new int[]{6, 8, 7}, student8.getSubjects()[1]));
 
-        student9.setGrade(new Grade(new int[]{7, 8, 9}, subjectsService.philosophy));
-        student9.setGrade(new Grade(new int[]{4, 5, 6}, subjectsService.linearAlgebra));
+        student9.setGrade(new Grade(new int[]{7, 8, 9}, student9.getSubjects()[0]));
+        student9.setGrade(new Grade(new int[]{4, 5, 6}, student9.getSubjects()[1]));
 
-        student10.setGrade(new Grade(new int[]{9, 8, 10}, subjectsService.german));
-        student10.setGrade(new Grade(new int[]{8, 8, 6}, subjectsService.cpp));
+        student10.setGrade(new Grade(new int[]{9, 8, 10}, student10.getSubjects()[0]));
+        student10.setGrade(new Grade(new int[]{8, 8, 6}, student10.getSubjects()[1]));
 
-        student11.setGrade(new Grade(new int[]{7, 5, 7}, subjectsService.armenian));
-        student11.setGrade(new Grade(new int[]{5, 5, 5}, subjectsService.history));
-        student11.setGrade(new Grade(new int[]{7, 8, 6}, subjectsService.cpp));
+        student11.setGrade(new Grade(new int[]{7, 5, 7}, student11.getSubjects()[0]));
+        student11.setGrade(new Grade(new int[]{5, 5, 5}, student11.getSubjects()[1]));
+        student11.setGrade(new Grade(new int[]{7, 8, 6}, student11.getSubjects()[2]));
 
-        student12.setGrade(new Grade(new int[]{10, 9, 8}, subjectsService.history));
-        student12.setGrade(new Grade(new int[]{7, 5, 6}, subjectsService.german));
-        student12.setGrade(new Grade(new int[]{4, 8, 6}, subjectsService.maths));
+        student12.setGrade(new Grade(new int[]{10, 9, 8}, student12.getSubjects()[0]));
+        student12.setGrade(new Grade(new int[]{7, 5, 6}, student12.getSubjects()[1]));
+        student12.setGrade(new Grade(new int[]{4, 8, 6}, student12.getSubjects()[2]));
     }
 
     /*getting marks and subjects of students, then calling the average
