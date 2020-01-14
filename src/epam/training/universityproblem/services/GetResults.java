@@ -1,40 +1,31 @@
 package epam.training.universityproblem.services;
 
 public class GetResults {
-    StudentsMarksService studentsMarksService = new StudentsMarksService();
-    GroupMarksService groupMarksService = new GroupMarksService();
-    FacultyMarksService facultyMarksService = new FacultyMarksService();
-    UniversityMarksService universityMarksService = new UniversityMarksService();
+    StudentsService studentsService = new StudentsService();
+    GroupService groupService = new GroupService();
+    FacultyService facultyService = new FacultyService();
+    UniversityService universityService = new UniversityService();
 
     public void getAverageMarkResults() {
+        System.out.println("Student's average grades");
+        System.out.println("-------------------------");
+        /*printing all student's average grades from all subjects*/
+        studentsService.getAverageOfStudentForCurrentSubject();
 
-        /*getting average marks for first group students from current subject*/
-        studentsMarksService.getAverageMarkForFirstGroupCurrentStudentForCurrentSubject();
-        /*getting average marks for second group students from current subject*/
-        studentsMarksService.getAverageMarkForSecondGroupCurrentStudentForCurrentSubject();
-        /*getting average marks for third group students from current subject*/
-        studentsMarksService.getAverageMarkForThirdGroupCurrentStudentForCurrentSubject();
-        /*getting average marks for fourth group students from current subject*/
-        studentsMarksService.getAverageMarkForFourthGroupCurrentStudentForCurrentSubject();
+        System.out.println("Average grades of groups");
+        System.out.println("-------------------------");
+        /*printing average grades from all subject of all groups*/
+        groupService.getAverageOfGroupForCurrentSubject();
 
+        System.out.println("Average grades of faculties");
+        System.out.println("----------------------------");
+        /*printing average grades from all subjects of all faculties*/
+        facultyService.getAverageOfFacultiesForCurrentSubject();
 
-        /*getting average marks for first group from current subject*/
-        groupMarksService.getAverageMarkForFirstGroupForCurrentSubject();
-        /*getting average marks for second group from current subject*/
-        groupMarksService.getAverageMarkForSecondGroupForCurrentSubject();
-        /*getting average marks for third group from current subject*/
-        groupMarksService.getAverageMarkForThirdGroupForCurrentSubject();
-        /*getting average marks for fourth group from current subject*/
-        groupMarksService.getAverageMarkForFourthGroupForCurrentSubject();
+        System.out.println("Average grades of university");
+        System.out.println("-----------------------------");
+        /*printing average grades from all subjects of university*/
+        universityService.getAverageOfUniversityForCurrentSubject();
 
-
-        /*getting average marks for first faculty from current subject*/
-        facultyMarksService.getAverageMarkForFirstFacultyForCurrentSubject();
-        /*getting average marks for second faculty from current subject*/
-        facultyMarksService.getAverageMarkForSecondFacultyForCurrentSubject();
-
-
-        /*getting average marks for university from current subject*/
-        universityMarksService.getAverageMarkForUniversityForCurrentSubject();
     }
 }

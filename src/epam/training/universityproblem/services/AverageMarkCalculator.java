@@ -7,6 +7,9 @@ public class AverageMarkCalculator {
 
     /*calculating the average mark*/
     public static double averageMark(int[] marks) {
+        if (marks.length == 0) {
+            return 0;
+        }
         double s = 0;                                //for calculating the sum of all the marks
         for (int i = 0; i < marks.length; i++) {
             s += marks[i];

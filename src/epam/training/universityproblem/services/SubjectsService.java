@@ -15,9 +15,7 @@ public class SubjectsService {
     Subject history = new Subject("history");
     Subject linearAlgebra = new Subject("linearAlgebra");
 
-    /*making subject arrays for single groups*/
-    Subject[] groupFirstSubjects = {maths, english, german, cpp, russian};
-    Subject[] groupSecondSubjects = {english, history, linearAlgebra, russian};
-    Subject[] groupThirdSubjects = {maths, philosophy, history};
-    Subject[] groupFourthSubjects = {maths, cpp, armenian};
+    Subject[] allSubjects = {cpp, philosophy, maths, english, armenian,
+            russian, german, history, linearAlgebra};
+
 }
