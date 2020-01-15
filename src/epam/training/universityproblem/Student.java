@@ -1,8 +1,5 @@
 package epam.training.universityproblem;
 
-import epam.training.universityproblem.exceptions.MarkOutOfBoundsException;
-import epam.training.universityproblem.exceptions.StudentWithNullSubjectsException;
-
 public class Student {
     String firstName;
     String lastName;
@@ -31,7 +28,7 @@ public class Student {
 
         /*throwing an exception if no subjects mentioned for the students*/
         if (subjects.length == 0) {
-            throw new StudentWithNullSubjectsException();
+            throw new RuntimeException("No Subject mentioned for this student!!!");
         }
         this.subjects = subjects;
     }
@@ -42,7 +39,7 @@ public class Student {
         /*throwing an exception if mark is not between 0 and 10*/
         for (int m : grade.getGrades()) {
             if ((m < 0) || (m > 10)) {
-                throw new MarkOutOfBoundsException();
+                throw new RuntimeException("Mark must be from 0 to 10!!!");
             }
         }
 

@@ -1,7 +1,5 @@
 package epam.training.universityproblem;
 
-import epam.training.universityproblem.exceptions.FacultyWithNullGroupsException;
-
 public class Faculty {
     private String name;
     private Group[] groups;
@@ -21,7 +19,7 @@ public class Faculty {
 
         /*throwing an exception if no groups included*/
         if (groups.length == 0) {
-            throw new FacultyWithNullGroupsException();
+            throw new RuntimeException("Faculty has not any group!!!");
         }
         this.groups = groups;
     }

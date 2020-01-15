@@ -1,7 +1,5 @@
 package epam.training.universityproblem;
 
-import epam.training.universityproblem.exceptions.UniversityWithNullFacultiesException;
-
 public class University {
     private String name;
     private Faculty[] faculties;
@@ -26,7 +24,7 @@ public class University {
 
         /*throwing an exception if no faculties included*/
         if (faculties.length == 0) {
-            throw new UniversityWithNullFacultiesException();
+            throw new RuntimeException("University has not any faculty!!!");
         }
         this.faculties = faculties;
     }
