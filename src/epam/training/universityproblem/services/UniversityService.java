@@ -16,7 +16,7 @@ public class UniversityService {
     counting function for each of the subject*/
     public void countAverageForUniversity(University university) {
         facultyService.groupService.studentsService.setStudentGrades();
-        double avg = 0;
+        double avg;
         Subject subjectName = null;
         for (int i = 0; i < subjectsService.allSubjects.length; i++) {
             int[] allStudentMarks = new int[0];

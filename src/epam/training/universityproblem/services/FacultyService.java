@@ -20,7 +20,7 @@ public class FacultyService {
     counting function for each of the subject*/
     public void countAverageForFaculties(Faculty faculty) {
         groupService.studentsService.setStudentGrades();
-        double avg = 0;
+        double avg;
         Subject subjectName = null;
         for (int i = 0; i < subjectsService.allSubjects.length; i++) {
             int[] allStudentMarks = new int[0];

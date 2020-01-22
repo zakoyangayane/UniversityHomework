@@ -23,7 +23,7 @@ public class Group {
 
         /*throwing an exception if no students included*/
         if (students.length == 0) {
-            throw new RuntimeException("Group has not any student!!!");
+            throw new RuntimeException("Group: " + this.getName() + " has not any student!!!");
         }
         this.students = students;
     }

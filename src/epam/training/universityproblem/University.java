@@ -24,7 +24,7 @@ public class University {
 
         /*throwing an exception if no faculties included*/
         if (faculties.length == 0) {
-            throw new RuntimeException("University has not any faculty!!!");
+            throw new RuntimeException("University: " + this.getName() + " has not any faculty!!!");
         }
         this.faculties = faculties;
     }

@@ -19,7 +19,7 @@ public class Faculty {
 
         /*throwing an exception if no groups included*/
         if (groups.length == 0) {
-            throw new RuntimeException("Faculty has not any group!!!");
+            throw new RuntimeException("Faculty: " + this.getName() + " has not any group!!!");
         }
         this.groups = groups;
     }

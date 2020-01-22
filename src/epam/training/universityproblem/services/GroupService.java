@@ -22,7 +22,7 @@ public class GroupService {
     counting function for each of the subject*/
     public void countAverageForGroups(Group group) {
         studentsService.setStudentGrades();
-        double avg = 0;
+        double avg;
         Subject subjectName = null;
         for (int i = 0; i < subjectsService.allSubjects.length; i++) {
             int[] allStudentMarks = new int[0];

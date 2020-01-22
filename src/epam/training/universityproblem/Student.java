@@ -28,7 +28,8 @@ public class Student {
 
         /*throwing an exception if no subjects mentioned for the students*/
         if (subjects.length == 0) {
-            throw new RuntimeException("No Subject mentioned for this student!!!");
+            throw new RuntimeException("No subject mentioned for student: " +
+                    this.getFirstName() + " " + this.getLastName() + "!!!");
         }
         this.subjects = subjects;
     }
@@ -39,7 +40,8 @@ public class Student {
         /*throwing an exception if mark is not between 0 and 10*/
         for (int m : grade.getGrades()) {
             if ((m < 0) || (m > 10)) {
-                throw new RuntimeException("Mark must be from 0 to 10!!!");
+                throw new RuntimeException(this.getFirstName() + " " + this.getLastName() + "'s " +
+                        grade.getSubject().getName() + " mark must be from 0 to 10!!!");
             }
         }
 

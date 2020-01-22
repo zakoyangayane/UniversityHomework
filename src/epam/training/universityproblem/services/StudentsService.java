@@ -104,7 +104,7 @@ public class StudentsService {
     counting function for each of them*/
     public void countAverageForStudents(Student student) {
         setStudentGrades();
-        double avg = 0;
+        double avg;
         for (int i = 0; i < student.getSubjects().length; i++) {
             int[] currentSubjectGrades = student.getGrade(student.getSubjects()[i]);
             avg = AverageMarkCalculator.averageMark(currentSubjectGrades);
