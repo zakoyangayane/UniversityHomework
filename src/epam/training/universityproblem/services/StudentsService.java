@@ -106,10 +106,11 @@ public class StudentsService {
         setStudentGrades();
         double avg;
         for (int i = 0; i < student.getSubjects().length; i++) {
-            int[] currentSubjectGrades = student.getGrade(student.getSubjects()[i]);
+            Subject[] subjectsData = student.getSubjects();
+            int[] currentSubjectGrades = student.getGrade(subjectsData[i]);
             avg = AverageMarkCalculator.averageMark(currentSubjectGrades);
             System.out.println("Average mark of " + student.getFirstName() + " " +
-                    student.getLastName() + " from " + student.getSubjects()[i].getName() +
+                    student.getLastName() + " from " + subjectsData[i].getName() +
                     " is " + avg);
         }
         System.out.println("---------------------");

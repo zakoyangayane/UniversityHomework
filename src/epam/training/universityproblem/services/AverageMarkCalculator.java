@@ -16,8 +16,7 @@ public class AverageMarkCalculator {
         }
         double average = s / marks.length;
         BigDecimal bd = new BigDecimal(average).setScale(1, RoundingMode.HALF_UP);
-        double roundedAverage = bd.doubleValue();    //the arithmetic average
-        return roundedAverage;
+        return bd.doubleValue();                     //the arithmetic average
     }
 
 

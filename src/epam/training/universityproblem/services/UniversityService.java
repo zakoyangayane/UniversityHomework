@@ -1,7 +1,6 @@
 package epam.training.universityproblem.services;
 
-import epam.training.universityproblem.Subject;
-import epam.training.universityproblem.University;
+import epam.training.universityproblem.*;
 
 public class UniversityService {
     FacultyService facultyService = new FacultyService();
@@ -21,18 +20,18 @@ public class UniversityService {
         for (int i = 0; i < subjectsService.allSubjects.length; i++) {
             int[] allStudentMarks = new int[0];
             for (int j = 0; j < university.getFaculties().length; j++) {
-                for (int k = 0; k < university.getFaculties()[j].getGroups().length; k++) {
-                    for (int l = 0; l < university.getFaculties()[j].getGroups()[k].
-                            getStudents().length; l++) {
-                        for (int m = 0; m < university.getFaculties()[j].getGroups()[k].
-                                getStudents()[l].getSubjects().length; m++) {
-                            if (university.getFaculties()[j].getGroups()[k].getStudents()[l].
-                                    getSubjects()[m].getName().equals(subjectsService.allSubjects[i].getName())) {
-                                subjectName = university.getFaculties()[j].
-                                        getGroups()[k].getStudents()[l].getSubjects()[m];
+                Faculty[] facultiesData = university.getFaculties();
+                for (int k = 0; k < facultiesData[j].getGroups().length; k++) {
+                    Group[] groupsData = facultiesData[j].getGroups();
+                    for (int l = 0; l < groupsData[k].getStudents().length; l++) {
+                        Student[] studentsData = groupsData[k].getStudents();
+                        for (int m = 0; m < studentsData[l].getSubjects().length; m++) {
+                            Subject[] subjectsData = studentsData[l].getSubjects();
+                            if (subjectsData[m].getName().
+                                    equals(subjectsService.allSubjects[i].getName())) {
+                                subjectName = subjectsData[m];
                                 allStudentMarks = AverageMarkCalculator.getAllMarks(allStudentMarks,
-                                        university.getFaculties()[j].getGroups()[k].
-                                                getStudents()[l].getGrade(subjectName));
+                                        studentsData[l].getGrade(subjectName));
                             }
                         }
                     }

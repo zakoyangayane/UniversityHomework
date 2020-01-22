@@ -1,6 +1,7 @@
 package epam.training.universityproblem.services;
 
 import epam.training.universityproblem.Group;
+import epam.training.universityproblem.Student;
 import epam.training.universityproblem.Subject;
 
 public class GroupService {
@@ -27,12 +28,14 @@ public class GroupService {
         for (int i = 0; i < subjectsService.allSubjects.length; i++) {
             int[] allStudentMarks = new int[0];
             for (int j = 0; j < group.getStudents().length; j++) {
-                for (int k = 0; k < group.getStudents()[j].getSubjects().length; k++) {
-                    if (group.getStudents()[j].getSubjects()[k].getName().
+                Student[] studentsData = group.getStudents();
+                for (int k = 0; k < studentsData[j].getSubjects().length; k++) {
+                    Subject[] subjectsData = studentsData[j].getSubjects();
+                    if (subjectsData[k].getName().
                             equals(subjectsService.allSubjects[i].getName())) {
-                        subjectName = group.getStudents()[j].getSubjects()[k];
+                        subjectName = subjectsData[k];
                         allStudentMarks = AverageMarkCalculator.getAllMarks(allStudentMarks,
-                                group.getStudents()[j].getGrade(subjectName));
+                                studentsData[j].getGrade(subjectName));
                     }
                 }
             }

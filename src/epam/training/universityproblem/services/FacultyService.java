@@ -1,6 +1,8 @@
 package epam.training.universityproblem.services;
 
 import epam.training.universityproblem.Faculty;
+import epam.training.universityproblem.Group;
+import epam.training.universityproblem.Student;
 import epam.training.universityproblem.Subject;
 
 public class FacultyService {
@@ -25,13 +27,16 @@ public class FacultyService {
         for (int i = 0; i < subjectsService.allSubjects.length; i++) {
             int[] allStudentMarks = new int[0];
             for (int j = 0; j < faculty.getGroups().length; j++) {
-                for (int k = 0; k < faculty.getGroups()[j].getStudents().length; k++) {
-                    for (int l = 0; l < faculty.getGroups()[j].getStudents()[k].getSubjects().length; l++) {
-                        if (faculty.getGroups()[j].getStudents()[k].getSubjects()[l].getName().
+                Group[] groupsData = faculty.getGroups();
+                for (int k = 0; k < groupsData[j].getStudents().length; k++) {
+                    Student[] studentsData = groupsData[j].getStudents();
+                    for (int l = 0; l < studentsData[k].getSubjects().length; l++) {
+                        Subject[] subjectsData = studentsData[k].getSubjects();
+                        if (subjectsData[l].getName().
                                 equals(subjectsService.allSubjects[i].getName())) {
-                            subjectName = faculty.getGroups()[j].getStudents()[k].getSubjects()[l];
+                            subjectName = subjectsData[l];
                             allStudentMarks = AverageMarkCalculator.getAllMarks(allStudentMarks,
-                                    faculty.getGroups()[j].getStudents()[k].getGrade(subjectName));
+                                    studentsData[k].getGrade(subjectName));
                         }
                     }
                 }
