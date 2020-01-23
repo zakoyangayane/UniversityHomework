@@ -1,7 +1,7 @@
 package epam.training.universityproblem;
 
 public class Faculty {
-    private String name;
+    private final String name;
     private Group[] groups;
 
     public Faculty(String name, Group[] groups) {

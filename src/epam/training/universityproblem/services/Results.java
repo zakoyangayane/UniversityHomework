@@ -1,6 +1,6 @@
 package epam.training.universityproblem.services;
 
-public class GetResults {
+public class Results {
     StudentsService studentsService = new StudentsService();
     GroupService groupService = new GroupService();
     FacultyService facultyService = new FacultyService();

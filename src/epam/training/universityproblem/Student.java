@@ -1,8 +1,8 @@
 package epam.training.universityproblem;
 
 public class Student {
-    String firstName;
-    String lastName;
+    final String firstName;
+    final String lastName;
     private Subject[] subjects;
     private Grade[] subjectGrades;
 

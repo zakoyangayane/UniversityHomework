@@ -1,7 +1,7 @@
 package epam.training.universityproblem;
 
 public class Group {
-    public String name;
+    public final String name;
     private Student[] students;
 
     public Group(String name, Student[] students) {
