@@ -22,7 +22,7 @@ public class Group {
     public void setStudents(Student[] students) {
 
         /*throwing an exception if no students included*/
-        if (students.length == 0) {
+        if (students != null && students.length == 0) {
             throw new RuntimeException("Group: " + this.getName() + " has not any student!!!");
         }
         this.students = students;

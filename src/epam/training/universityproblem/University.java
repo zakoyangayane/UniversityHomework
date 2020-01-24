@@ -23,7 +23,7 @@ public class University {
     public void setFaculties(Faculty[] faculties) {
 
         /*throwing an exception if no faculties included*/
-        if (faculties.length == 0) {
+        if (faculties != null && faculties.length == 0) {
             throw new RuntimeException("University: " + this.getName() + " has not any faculty!!!");
         }
         this.faculties = faculties;

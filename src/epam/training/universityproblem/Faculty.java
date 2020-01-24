@@ -18,7 +18,7 @@ public class Faculty {
     public void setGroups(Group[] groups) {
 
         /*throwing an exception if no groups included*/
-        if (groups.length == 0) {
+        if (groups != null && groups.length == 0) {
             throw new RuntimeException("Faculty: " + this.getName() + " has not any group!!!");
         }
         this.groups = groups;

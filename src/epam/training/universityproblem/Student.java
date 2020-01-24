@@ -27,7 +27,7 @@ public class Student {
     public void setSubjects(Subject[] subjects) {
 
         /*throwing an exception if no subjects mentioned for the students*/
-        if (subjects.length == 0) {
+        if (subjects != null && subjects.length == 0) {
             throw new RuntimeException("No subject mentioned for student: " +
                     this.getFirstName() + " " + this.getLastName() + "!!!");
         }
@@ -36,18 +36,19 @@ public class Student {
 
     /*set grades for a student for a current subject*/
     public void setGrade(Grade grade) {
-
-        /*throwing an exception if mark is not between 0 and 10*/
-        for (int m : grade.getGrades()) {
-            if ((m < 0) || (m > 10)) {
-                throw new RuntimeException(this.getFirstName() + " " + this.getLastName() + "'s " +
-                        grade.getSubject().getName() + " mark must be from 0 to 10!!!");
+        if (grade != null) {
+            /*throwing an exception if mark is not between 0 and 10*/
+            for (int m : grade.getGrades()) {
+                if ((m < 0) || (m > 10)) {
+                    throw new RuntimeException(this.getFirstName() + " " + this.getLastName() + "'s " +
+                            grade.getSubject().getName() + " mark must be from 0 to 10!!!");
+                }
             }
-        }
 
-        for (int i = 0; i < subjects.length; i++) {
-            if (subjects[i].equals(grade.getSubject())) {
-                this.subjectGrades = setAllGrades(this.subjectGrades, grade);
+            for (int i = 0; i < subjects.length; i++) {
+                if (subjects[i].equals(grade.getSubject())) {
+                    this.subjectGrades = setAllGrades(this.subjectGrades, grade);
+                }
             }
         }
     }
