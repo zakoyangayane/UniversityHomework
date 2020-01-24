@@ -8,7 +8,6 @@ public class University {
         this.name = name;
 
         setFaculties(faculties);
-        this.faculties = faculties;
     }
 
     public String getName() {

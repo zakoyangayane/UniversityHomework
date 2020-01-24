@@ -8,7 +8,6 @@ public class Faculty {
         this.name = name;
 
         setGroups(groups);
-        this.groups = groups;
     }
 
     public Group[] getGroups() {

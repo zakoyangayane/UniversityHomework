@@ -8,7 +8,6 @@ public class Group {
         this.name = name;
 
         setStudents(students);
-        this.students = students;
     }
 
     public String getName() {
